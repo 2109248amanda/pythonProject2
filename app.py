@@ -29,9 +29,7 @@ def quero_receber():
     alimentos = request.form.get('alimentos')
     moveis = request.form.get('moveis')
     medicamentos = request.form.get('medicamentos')
-    produtos_gerais = request.form.get('produtos_gerais')
-
-    # Faça o processamento necessário para cada item selecionado
+    produtos_gerais = request.form.get('produtos_gerais') 
 
     return render_template('quero-receber.html')
 
