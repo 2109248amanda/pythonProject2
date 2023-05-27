@@ -1,7 +1,8 @@
 from urllib import request
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
+import sqlite3
 app = Flask(__name__)
 
 @app.route('/')
@@ -16,6 +17,7 @@ def quem_somos():
 def cadastro():
     return render_template('cadastro.html')
 
+
 @app.route('/quero-doar')
 def quero_doar():
     return render_template('quero_doar.html')
@@ -29,7 +31,8 @@ def quero_receber():
     alimentos = request.form.get('alimentos')
     moveis = request.form.get('moveis')
     medicamentos = request.form.get('medicamentos')
-    produtos_gerais = request.form.get('produtos_gerais') 
+    produtos_gerais = request.form.get('produtos_gerais')
+
 
     return render_template('quero-receber.html')
 
